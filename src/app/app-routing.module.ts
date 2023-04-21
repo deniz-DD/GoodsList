@@ -4,15 +4,15 @@ import { Recipe } from './recipes/recipe.model';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 const routes: Routes = [
-  {
-    path: 'recipe', 
-    component: Recipe
-  }, 
-  {
-    path: 'shopping',
-    component: ShoppingListComponent 
+  // {
+  //   path: 'recipe', 
+  //   component: Recipe
+  // }, 
+  // {
+  //   path: 'shopping',
+  //   component: ShoppingListComponent 
 
-  }
+  // }
 ];
 
 @NgModule({

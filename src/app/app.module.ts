@@ -16,7 +16,14 @@ import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: [
     AppComponent, 
-    HeaderComponentComponent, RecipesComponent, RecipeListComponent, RecipesDetailComponent, RecipeItemComponent, ShoppingListComponent, ShoppingEditComponent, TestComponent
+    HeaderComponentComponent,
+    RecipesComponent, 
+    RecipeListComponent, 
+    RecipesDetailComponent, 
+    RecipeItemComponent, 
+    ShoppingListComponent, 
+    ShoppingEditComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,28 @@
-import { Component , EventEmitter , Output } from '@angular/core';
+import { Component , EventEmitter , Output , OnInit } from '@angular/core';
 import{Recipe} from '../recipe.model'
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.scss']
 })
-export class RecipeListComponent {
+export class RecipeListComponent  implements OnInit{
 
-  @Output() recipeWasSe = new EventEmitter<Recipe>();
+  
+
+  constructor( private recipeService: RecipeService){}
+
+  ngOnInit(): void {
+    this.recipes = this.recipeService.getRecipes();
+  }
 
 
-  recipes: Recipe[] = [
-    new Recipe('Moin' , 'testtest' , 'https://cdn.pixabay.com/photo/2014/08/08/20/51/hunger-413685_960_720.jpg'), 
-    new Recipe('Peter' , 'testtest' , 'https://cdn.pixabay.com/photo/2014/08/08/20/51/hunger-413685_960_720.jpg'), 
-    new Recipe('Ranke' , 'testtest' , 'https://cdn.pixabay.com/photo/2014/08/08/20/51/hunger-413685_960_720.jpg'), 
-    new Recipe('Ranke' , 'testtest' , 'https://cdn.pixabay.com/photo/2014/08/08/20/51/hunger-413685_960_720.jpg')
-  ];
+  recipes: Recipe[] = [];
+
+
+
+
 
   OnDestroyFirst(){
     this.recipes.splice(0 , 1);
@@ -24,8 +30,6 @@ export class RecipeListComponent {
     
   }
 
-  OnRecipeSe(recipe: Recipe){
-    this.recipeWasSe.emit(recipe);
-  }
+ 
 
 }

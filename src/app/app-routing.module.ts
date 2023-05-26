@@ -7,6 +7,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { TestComponent } from './test/test.component';
 import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 import { RecipesDetailComponent } from './recipes/recipes-detail/recipes-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const routes: Routes = [
   {
@@ -23,9 +24,18 @@ const routes: Routes = [
         component: RecipesStartComponent
       }, 
       {
+        path: 'new', 
+        component: RecipeEditComponent
+
+      }, 
+      {
         path: ':id', 
         component: RecipesDetailComponent
 
+      }, 
+      {
+        path: ':id/edit', 
+        component: RecipeEditComponent
       }
     ]
   }, 

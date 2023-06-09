@@ -14,13 +14,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class=""><a  routerLink="/recipe" routerLinkActive="false"  (click)="onSelect('recipe')">Recipes</a></li>
-          <li><a  routerLink="/shopping" routerLinkActive="false" (click)="onSelect('shopping-list')">ShoppingList</a></li>
-          <li><a  routerLink="/test" routerLinkActive="true" (click)="onSelect('test')">Test</a></li>
+          <li class=""><a  routerLinkActive="active" routerLink="/recipe" routerLinkActive="false" >Recipes</a></li>
+          <li><a  routerLinkActive="active" routerLink="/shopping" routerLinkActive="false" >ShoppingList</a></li>
+          <li><a  routerLinkActive="active" routerLink="/test" routerLinkActive="true" >Test</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown" appDropdown>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Save</a></li>
               <li><a href="#">Fetch Data </a></li>
